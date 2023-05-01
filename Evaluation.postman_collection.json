@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "fd6c4788-ed3a-473f-9370-7ed796eb89e5",
+		"name": "Evaluation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12149443"
+	},
+	"item": [
+		{
+			"name": "Cadastro de Beneficiario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"José da Silva\",\r\n    \"telefone\": \"1100000000\",\r\n    \"dataNascimento\": \"2000-03-01T00:00:00\",\r\n    \"documentos\": [\r\n        {\r\n            \"tipoDocumento\": \"CPF\",\r\n            \"descricao\": \"22222222222\"\r\n        },        \r\n        {\r\n            \"tipoDocumento\": \"RG\",\r\n            \"descricao\": \"333333333\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/beneficiario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"José da Silva\",\r\n    \"telefone\": \"1100000000\",\r\n    \"dataNascimento\": \"2000-05-01T00:00:00\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/beneficiario/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/beneficiario/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Beneficiario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/beneficiario/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Beneficiario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/beneficiario/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Documentos by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/beneficiario/1/documentos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"1",
+						"documentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update documento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipoDocumento\": \"PASSAPORTE\",\r\n    \"descricao\" : \"3344556677\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/beneficiario/1/documentos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"1",
+						"documentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Documento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/beneficiario/1/documentos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"beneficiario",
+						"1",
+						"documentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
